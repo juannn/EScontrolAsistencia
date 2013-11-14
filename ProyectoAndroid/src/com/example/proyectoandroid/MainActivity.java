@@ -6,51 +6,68 @@ import android.content.Intent;
 import android.text.util.Linkify;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+	BaseDeDatos sql =new BaseDeDatos(this);
+	private Button btnAceptar,btnCancelar;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		configureButtonReader(); 
+		btnAceptar=(Button)findViewById(R.id.btnAceptar);
+		btnCancelar=(Button)findViewById(R.id.btnCancelar);
+		
+btnCancelar.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				EditText nom=(EditText)findViewById(R.id.txtNombreUsuario);
+				EditText pas=(EditText)findViewById(R.id.txtPass);
+			String nombreUsuario=nom.getText().toString();
+			String password=pas.getText().toString();
+			
+			nom.setText("");
+			pas.setText("");
+			
+			
+			}
+		});
+		
+		btnAceptar.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				EditText nom=(EditText)findViewById(R.id.txtNombreUsuario);
+				EditText pas=(EditText)findViewById(R.id.txtPass);
+			String nombreUsuario=nom.getText().toString();
+			String password=pas.getText().toString();
+			
+			if(nombreUsuario.equals("Juan")&& password.equals("12345")){
+				Intent inten=new Intent();
+				inten.setClass(MainActivity.this,MenuAdministrador.class);
+				startActivity(inten);
+			}
+			else
+			{
+			Toast.makeText(getApplication(), "Error de Contraseña", Toast.LENGTH_LONG).show();
+			}
+			
+			}
+		});
 		
 	}
 
-	   private <QrReaderActity> void configureButtonReader() {  
-	        final ImageButton buttonReader = (ImageButton)findViewById(R.id.btReader);  
-	        buttonReader.setOnClickListener(new View.OnClickListener() {  
-	            @Override  
-	            public void onClick(View view) {  
-	            	  new IntentIntegrator(MainActivity.this).initiateScan();  
-	            }  
-	        });  
-	    }
-	   
-	   @Override  
-	    public void onActivityResult(int requestCode, int resultCode, Intent intent) {  
-	        final IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);  
-	        handleResult(scanResult);  
-	    }
-	   
-	    private void handleResult(IntentResult scanResult) {  
-	        if (scanResult != null) {  
-	            updateUITextViews(scanResult.getContents(), scanResult.getFormatName());  
-	        } else {  
-	            Toast.makeText(this, "No se ha leído nada :(", Toast.LENGTH_SHORT).show();  
-	        }  
-	    }  
-	    
-	    private void updateUITextViews(String scan_result, String scan_result_format) {  
-	        ((TextView)findViewById(R.id.tvFormat)).setText(scan_result_format);  
-	        final TextView tvResult = (TextView)findViewById(R.id.tvResult);  
-	        tvResult.setText(scan_result);  
-	        Linkify.addLinks(tvResult, Linkify.ALL);  
-	    }
+	  
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

@@ -22,6 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.proyectoandroid.MenuPrincipal"
+            android:label="@string/title_activity_menu_principal" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.MenuAdministrador"
+            android:label="@string/title_activity_menu_administrador" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.NuevoUsuario"
+            android:label="@string/title_activity_nuevo_usuario" >
+        </activity>
     </application>
 
 </manifest>
