@@ -3,14 +3,14 @@ package com.example.proyectoandroid;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.text.util.Linkify;
+//import android.text.util.Linkify;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
+//import android.widget.ImageButton;
+//import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -32,9 +32,11 @@ btnCancelar.setOnClickListener(new OnClickListener() {
 				// TODO Auto-generated method stub
 				EditText nom=(EditText)findViewById(R.id.txtNombreUsuario);
 				EditText pas=(EditText)findViewById(R.id.txtPass);
-			String nombreUsuario=nom.getText().toString();
-			String password=pas.getText().toString();
-			
+			//String nombreUsuario=nom.getText().toString();
+			//String password=pas.getText().toString();
+			String res=sql.ListaRol();
+			Toast.makeText(getApplication(),res,Toast.LENGTH_LONG).show();
+				
 			nom.setText("");
 			pas.setText("");
 			

@@ -18,5 +18,20 @@
     <string name="Lid">Lider</string>
     <string name="title_activity_nuevo_usuario">NuevoUsuario</string>
     <string name="nom">Nombre Usuario</string>
+    <string name="usu">Usuario</string>
+    <string name="pasw">Password</string>
+    <string name="nomb">Nombres</string>
+    <string name="Apel">Apellidos</string>
+    <string name="des">Descripcion</string>
+    <string name="nuevo">NUEVO USUARIO</string>
+    <string name="NAC">Fecha Nacimiento</string>
+    <string name="fechaR">Fecha Registro</string>
+    <string name="cont">Contacto</string>
+    <string name="dom">Domicilio</string>
+    <string name="ad">Administrador</string>
+    <string name="lid">Lider</string>
+    <string name="can">Cancelar</string>
+    <string name="ace">OK</string>
+    <string name="pp">Aceptar</string>
 
 </resources>
