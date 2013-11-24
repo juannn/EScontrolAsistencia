@@ -8,6 +8,11 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -33,6 +38,34 @@
         <activity
             android:name="com.example.proyectoandroid.NuevoUsuario"
             android:label="@string/title_activity_nuevo_usuario" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.Administrador"
+            android:label="@string/title_activity_administrador" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.AddUsuario"
+            android:label="@string/title_activity_add_usuario" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.MenuAsistencia"
+            android:label="@string/title_activity_menu_asistencia" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.MenuAsistencias"
+            android:label="@string/title_activity_menu_asistencias" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.ControlAsistencia"
+            android:label="@string/title_activity_control_asistencia" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.ControlPersonal"
+            android:label="@string/title_activity_control_personal" >
+        </activity>
+        <activity
+            android:name="com.example.proyectoandroid.AddMiembro"
+            android:label="@string/title_activity_add_miembro" >
         </activity>
     </application>
 

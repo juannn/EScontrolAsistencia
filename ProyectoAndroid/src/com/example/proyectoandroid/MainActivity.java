@@ -2,6 +2,7 @@ package com.example.proyectoandroid;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog.Builder;
 import android.content.Intent;
 //import android.text.util.Linkify;
 import android.view.Menu;
@@ -14,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-	BaseDeDatos sql =new BaseDeDatos(this);
+
 	private Button btnAceptar,btnCancelar;
 	
 	@Override
@@ -32,11 +33,7 @@ btnCancelar.setOnClickListener(new OnClickListener() {
 				// TODO Auto-generated method stub
 				EditText nom=(EditText)findViewById(R.id.txtNombreUsuario);
 				EditText pas=(EditText)findViewById(R.id.txtPass);
-			//String nombreUsuario=nom.getText().toString();
-			//String password=pas.getText().toString();
-			String res=sql.ListaRol();
-			Toast.makeText(getApplication(),res,Toast.LENGTH_LONG).show();
-				
+
 			nom.setText("");
 			pas.setText("");
 			
@@ -54,16 +51,34 @@ btnCancelar.setOnClickListener(new OnClickListener() {
 			String nombreUsuario=nom.getText().toString();
 			String password=pas.getText().toString();
 			
-			if(nombreUsuario.equals("Juan")&& password.equals("12345")){
-				Intent inten=new Intent();
-				inten.setClass(MainActivity.this,MenuAdministrador.class);
-				startActivity(inten);
+			
+			
+			if(nombreUsuario.equals("Juan")||password.equals("123456")){
+            
+			Builder dialog=new Builder(MainActivity.this);
+	        dialog.setTitle("Mensaje");
+	        dialog.setMessage("Bienvenido\nSeñor Administrador");
+	        dialog.setNeutralButton("Aceptar", null);
+	        dialog.show();
+			
+	        nom.setText("");
+			pas.setText("");
+	        
+			Intent inten=new Intent();
+			inten.setClass(MainActivity.this,MenuAdministrador.class);
+			startActivity(inten);
 			}
-			else
-			{
-			Toast.makeText(getApplication(), "Error de Contraseña", Toast.LENGTH_LONG).show();
+			else{		
+
+				Builder dialog=new Builder(MainActivity.this);
+	            dialog.setTitle("Error!");
+	            dialog.setMessage("El usuario no existe \npara mas informacion Comunicarse \ncon el Administrador");
+	            dialog.setNeutralButton("ok", null);
+	            dialog.show();
 			}
 			
+			
+
 			}
 		});
 		

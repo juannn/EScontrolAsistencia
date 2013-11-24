@@ -33,5 +33,23 @@
     <string name="can">Cancelar</string>
     <string name="ace">OK</string>
     <string name="pp">Aceptar</string>
+    <string name="title_activity_administrador">Administrador</string>
+    <string name="title_activity_add_usuario">AddUsuario</string>
+    <string name="title_activity_menu_asistencia">MenuAsistencia</string>
+    <string name="sele">SELECCIONE UNA OPCION</string>
+    <string name="selec">Seleccione una Opcion</string>
+    <string name="cod">TIPO DE CODIGO</string>
+    <string name="title_activity_menu_asistencias">MenuAsistencias</string>
+    <string name="title_activity_control_asistencia">ControlAsistencia</string>
+    <string name="texto">aqui..........</string>
+    <string name="bot">boton</string>
+    <string name="aa">SELECCIONE UNA OPCION</string>
+    <string name="title_activity_control_personal">ControlPersonal</string>
+    <string name="codig">Tipo de Codigo</string>
+    <string name="datos">Datos de la Persona</string>
+    <string name="contro">Control  de Asistencia</string>
+    <string name="codi">Codigo</string>
+    <string name="dato">Persona</string>
+    <string name="title_activity_add_miembro">AddMiembro</string>
 
 </resources>
