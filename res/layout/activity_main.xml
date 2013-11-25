@@ -6,30 +6,111 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/uno_"
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/tvFormat"
+        android:id="@+id/lblNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitulo"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/us"
+        android:textColor="@color/blanco_"
+        android:textSize="20sp"
+        android:textStyle="bold" 
+             android:shadowColor="@color/negro_"
+        android:shadowDx="2" android:shadowDy="2" android:shadowRadius="2">
+        </TextView>
+
+   <EditText
+        android:id="@+id/txtNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblNombre"
+        android:layout_alignRight="@+id/checkControl"
+        android:layout_below="@+id/lblNombre"
+        android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/tvResult"
+        android:id="@+id/lblPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvFormat"
-        android:layout_below="@+id/tvFormat"
-        android:layout_marginTop="46dp"
-        android:text="TextView" />
+        android:layout_alignLeft="@+id/txtNombreUsuario"
+        android:layout_below="@+id/txtNombreUsuario"
+        android:text="@string/pas" 
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/blanco_"
+        android:shadowColor="@color/negro_"
+        android:shadowDx="2" android:shadowDy="2" android:shadowRadius="2" 
+        />
 
-    <ImageButton
-        android:id="@+id/btReader"
+    <EditText
+        android:id="@+id/txtContra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvResult"
-        android:layout_marginTop="77dp"
-        android:layout_toRightOf="@+id/tvFormat"
-        android:src="@drawable/ic_launcher" />
+        android:layout_alignLeft="@+id/lblPassword"
+        android:layout_below="@+id/lblPassword"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="20dp"
+        android:layout_height="35dp"
+        android:layout_alignRight="@+id/txtContra"
+        android:layout_below="@+id/txtContra"
+        android:layout_toRightOf="@+id/lblNombre"
+        android:background="@drawable/pressed"
+        android:shadowColor="@color/negro_"
+        android:shadowDx="6"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="@string/Can"
+        android:textColor="@color/blanco_" />
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="20dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/btnBorrar"
+        android:layout_alignLeft="@+id/txtContra"
+        android:layout_alignRight="@+id/lblPassword"
+        android:layout_alignTop="@+id/btnBorrar"
+        android:background="@drawable/pressed"
+        android:shadowColor="@color/negro_"
+        android:shadowDx="6"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="@string/act"
+        android:textColor="@color/blanco_" />
+
+    <TextView
+        android:id="@+id/lblTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	
+        android:layout_centerHorizontal="true"
+        android:shadowColor="#000000"
+        android:shadowDx="6"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="@string/tit"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
+    <CheckedTextView
+        android:id="@+id/checkControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBorrar"
+        android:layout_centerHorizontal="true"
+        android:text="Ir al menu de asistencia"
+        android:textColor="@color/azul_claro"
+        android:textSize="20sp" />
 
 </RelativeLayout>

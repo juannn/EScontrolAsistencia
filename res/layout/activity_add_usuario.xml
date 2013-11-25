@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddUsuario" >
+
+   <EditText
+        android:id="@+id/txtnom"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="43dp"
+        android:ems="10"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/lblnombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtnom"
+        android:layout_alignLeft="@+id/txtnom"
+        android:layout_marginBottom="33dp"
+        android:text="@string/usu" />
+
+    <TextView
+        android:id="@+id/lblContenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPassword"
+        android:layout_below="@+id/txtnom"
+        android:text="@string/pasw" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/txtnom"
+        android:layout_below="@+id/lblContenido"
+        android:ems="10"
+        android:textSize="11sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPassword"
+        android:layout_below="@+id/txtPassword"
+        android:text="@string/nomb" />
+
+    <EditText
+        android:id="@+id/txtNombres"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:ems="10"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/lblContenido"
+        android:layout_below="@+id/txtNombres"
+        android:text="@string/Apel" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lblnombre"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/txtnom"
+        android:text="@string/NAC" />
+
+    <EditText
+        android:id="@+id/txtFechaNacimiento"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/lblContenido"
+        android:layout_alignLeft="@+id/textView5"
+        android:ems="10"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtFechaNacimiento"
+        android:layout_below="@+id/txtFechaNacimiento"
+        android:text="@string/fechaR" />
+
+    <EditText
+        android:id="@+id/FechaRegistro"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:ems="10"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/FechaRegistro"
+        android:layout_below="@+id/FechaRegistro"
+        android:text="@string/cont" />
+
+    <EditText
+        android:id="@+id/txtContacto"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_below="@+id/textView7"
+        android:ems="10"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtApellidos"
+        android:layout_alignLeft="@+id/txtContacto"
+        android:text="@string/dom" />
+
+    <EditText
+        android:id="@+id/txtApellidos"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:ems="10"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/txtDomicilio"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/txtApellidos"
+        android:layout_alignBottom="@+id/txtApellidos"
+        android:layout_alignLeft="@+id/textView8"
+        android:ems="10"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/lblContenido"
+        android:text="@string/nuevo"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/checkAdministrador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtDomicilio"
+        android:layout_below="@+id/txtDomicilio"
+        android:text="@string/ad"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/checkLider"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/checkAdministrador"
+        android:layout_alignRight="@+id/checkAdministrador"
+        android:layout_below="@+id/checkAdministrador"
+        android:height="150dp"
+        android:hint="30"
+        android:text="@string/lid"
+        android:textSize="12sp"
+        android:width="20dp" />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/checkLider"
+        android:layout_alignLeft="@+id/txtApellidos"
+        android:ems="10"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtApellidos"
+        android:layout_below="@+id/txtApellidos"
+        android:text="@string/des" />
+
+    <Button
+        android:id="@+id/btnAceptarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtDescripcion"
+        android:layout_below="@+id/checkLider"
+        android:onClick="Aceptar"
+        android:text="@string/pp"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnCancelarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkLider"
+        android:layout_toLeftOf="@+id/checkLider"
+        android:onClick="Cancelar"
+        android:text="@string/can"
+        android:textSize="13sp" />
+
+</RelativeLayout>
